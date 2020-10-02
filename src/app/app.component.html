@@ -1,10 +1,25 @@
-
 <div class="container">
-    
-    <h1>estoy en la home</h1>  
+
+    <h1>{{saludo}}</h1>
     <a routerLink="uno">uno</a><br>
     <a routerLink="dos">dos</a>
-    
+    <button (click)="cargarEstados()">estados</button>
+    <table class="table">
+        <tr>
+            <td>Id</td>
+            <td>DESCRIPCION</td>
+            <td>TIPO</td>
+        </tr>
+
+        <tr *ngFor="let estado of estados ">
+            <td>{{estado.id}}</td>
+            <td>{{estado.descripcion}}</td>
+            <td>{{estado.tipo}}</td>
+        </tr>
+
+    </table>
+
+
+
     <router-outlet></router-outlet>
-    </div>
-    
+</div>
