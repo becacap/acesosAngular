@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DosComponent } from './dos/dos.component';
+import { UnoComponent } from './uno/uno.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DosComponent,
+    UnoComponent,
+    
   ],
   imports: [
     BrowserModule,
