@@ -7,6 +7,7 @@ import { Empleado } from './clases/app.persona';
 export class EmpleadoService {
 
   texto: string; 
+  
   constructor() { }
 
   obtenerEmpleados(url: string): Promise<string> {
