@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JornadasComponent } from './jornadas/jornadas.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
+import { EmpleadoFormularioComponent } from './empleado-formulario/empleado-formulario.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { EmpleadosComponent } from './empleados/empleados.component';
     AppComponent,
     JornadasComponent,
     EmpleadosComponent,
+    EmpleadoFormularioComponent,
     
   ],
   imports: [

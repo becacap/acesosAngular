@@ -1,1 +1,33 @@
-<p>empleados works!</p>
+<app-empleado-formulario></app-empleado-formulario>
+<button (click)="cargarEmpleado()">Cargar empleados</button>
+<!-- <button (click)="anadirEmpleado()">Añadir empleado</button> -->
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Nombre</td>
+        <td>Apellidos</td>
+        <td>DNI</td>
+        <td>Identificador</td>
+        <td>Fecha de alta</td>
+        <td>fecha de baja</td>
+        <td>Jornada</td>
+        <td>Accion</td>
+    </tr>
+
+    <tr *ngFor="let empleado of empleado ">
+        <td>{{empleado.id}}</td>
+        <td>{{empleado.nombre}}</td>
+        <td>{{empleado.apellidos}}</td>
+        <td>{{empleado.dni}}</td>
+        <td>{{empleado.identificador}}</td>
+        <td>{{empleado.fecha_alta}}</td>
+        <td>{{empleado.fecha_baja}}</td>
+        <td>{{empleado.jornada.descripcion}}</td>
+        <td><button type="button" class="btn btn-primary">Modificar</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-danger">Borrar</button>
+                                                                        </td>
+    </tr>
+
+</table>
