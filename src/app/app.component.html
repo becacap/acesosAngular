@@ -1,20 +1,30 @@
 <div class="container">
+    
 
     <h1>{{saludo}}</h1>
-    <a routerLink="uno">uno</a><br>
-    <a routerLink="dos">dos</a>
-    <button (click)="cargarEstados()">estados</button>
+    <button (click)="cargarEmpleado()">Cargar empleados</button>
+    <!-- <button (click)="anadirEmpleado()">Añadir empleado</button> -->
     <table class="table">
         <tr>
             <td>Id</td>
-            <td>DESCRIPCION</td>
-            <td>TIPO</td>
+            <td>Nombre</td>
+            <td>Apellidos</td>
+            <td>DNI</td>
+            <td>Identificador</td>
+            <td>Fecha de alta</td>
+            <td>fecha de baja</td>
+            <td>Jornada</td>
         </tr>
 
-        <tr *ngFor="let estado of estados ">
-            <td>{{estado.id}}</td>
-            <td>{{estado.descripcion}}</td>
-            <td>{{estado.tipo}}</td>
+        <tr *ngFor="let empleado of empleado ">
+            <td>{{empleado.id}}</td>
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.apellidos}}</td>
+            <td>{{empleado.dni}}</td>
+            <td>{{empleado.identificador}}</td>
+            <td>{{empleado.fecha_alta}}</td>
+            <td>{{empleado.fecha_baja}}</td>
+            <td>{{empleado.jornada.descripcion}}</td>
         </tr>
 
     </table>
