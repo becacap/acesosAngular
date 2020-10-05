@@ -7,6 +7,12 @@ import { EmpleadoService } from '../empleados.service';
   styleUrls: ['./empleados.component.css']
 })
 export class EmpleadosComponent implements OnInit {
+  
+  saludo: string;
+  servicio: EmpleadoService;
+  urlEmpleado: string = "http://localhost:8080/api/empleados"
+  urlEmpleadoAnadir: string = "http://localhost:8080/api/add-jornada" //No es esta URL revisar
+  empleado: string;
 
   
   saludo: string;

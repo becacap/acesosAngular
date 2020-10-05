@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Empleado} from '../clases/app.persona';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import {NgForm, NgModel} from '@angular/forms';
+import { Empleado } from '../clases/app.persona';
+import { NgForm,NgModel } from '@angular/forms';
+
 
 @Component({
   selector: 'app-empleado-formulario',
