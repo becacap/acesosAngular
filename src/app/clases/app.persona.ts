@@ -121,3 +121,10 @@ export class UsuariosEstados {
         this.calendario = calendario
     }
 }
+
+export class Dia{
+    dia:number
+    diaSemana:number
+    semanaMes:number
+    estadoActual:number
+}

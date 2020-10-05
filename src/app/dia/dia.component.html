@@ -1,0 +1,10 @@
+<div>
+    <h1>{{dia}}</h1>
+
+    <select name="estado" id="estado">
+        <option *ngFor="let estado of estadosPosibles" value="estado.id" class="mi-option">
+            {{estado.descripcion}}
+        </option>
+    </select>
+</div>
+

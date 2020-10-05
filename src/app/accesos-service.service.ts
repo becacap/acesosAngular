@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Estado } from './clases/app.persona';
-
+ 
 @Injectable({
   providedIn: 'root'
 })

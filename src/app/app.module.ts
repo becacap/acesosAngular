@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DosComponent } from './dos/dos.component';
 import { UnoComponent } from './uno/uno.component';
+import { DiaComponent } from './dia/dia.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { UnoComponent } from './uno/uno.component';
     AppComponent,
     DosComponent,
     UnoComponent,
+    DiaComponent,
     
   ],
   imports: [
