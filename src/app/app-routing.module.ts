@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DiaComponent } from './dia/dia.component';
 import { DosComponent } from './dos/dos.component';
+import { MesComponent } from './mes/mes.component';
 import { UnoComponent } from './uno/uno.component';
 
 
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path:'dia',
     component: DiaComponent
+  },
+  {
+    path:'mes',
+    component: MesComponent
   }
 ];
 

@@ -19,10 +19,10 @@ export class DiaComponent implements OnInit {
   constructor(accesosService: AccesosServiceService) {
     this.servicio = accesosService;
     this.servicio.obtenerDatos(this.urlEstados).then((datos: string) => {
-      console.log(datos)
+      //console.log(datos)
       this.estadosPosibles = JSON.parse(JSON.stringify(datos))
       this.seleccion = this.dia.estadoActual.id;
-      console.log(this.seleccion)
+      //console.log(this.seleccion)
 
     })
   }
@@ -31,8 +31,8 @@ export class DiaComponent implements OnInit {
   }
 
   cambiarOpcion(cambio:number){
-    console.log("He cambiado a " + cambio)
-    this
+    //console.log("He cambiado a " + cambio)
+    
   }
 
 }

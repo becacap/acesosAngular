@@ -7,6 +7,7 @@ import { DosComponent } from './dos/dos.component';
 import { UnoComponent } from './uno/uno.component';
 import { DiaComponent } from './dia/dia.component';
 import { FormsModule } from '@angular/forms';
+import { MesComponent } from './mes/mes.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     DosComponent,
     UnoComponent,
     DiaComponent,
+    MesComponent,
     
   ],
   imports: [
