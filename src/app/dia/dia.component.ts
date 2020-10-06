@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, DebugElement, Input, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
 import { AccesosServiceService } from '../accesos-service.service';
 import { Dia, Estado } from '../clases/app.persona';
 
@@ -9,24 +9,30 @@ import { Dia, Estado } from '../clases/app.persona';
 })
 export class DiaComponent implements OnInit {
 
-  dia: number;
+  @Input("dia") dia: Dia;
   servicio: AccesosServiceService;
   urlEstados: string = "http://localhost:8080/api/estados/estados-calendario/"
   estadosPosibles: Array<Estado>
+  seleccion:number
 
 
   constructor(accesosService: AccesosServiceService) {
-    this.dia = 7
     this.servicio = accesosService;
     this.servicio.obtenerDatos(this.urlEstados).then((datos: string) => {
       console.log(datos)
-      console.log(JSON.parse(JSON.stringify(datos)))
       this.estadosPosibles = JSON.parse(JSON.stringify(datos))
+      this.seleccion = this.dia.estadoActual.id;
+      console.log(this.seleccion)
 
     })
   }
 
   ngOnInit(): void {
+  }
+
+  cambiarOpcion(cambio:number){
+    console.log("He cambiado a " + cambio)
+    this
   }
 
 }

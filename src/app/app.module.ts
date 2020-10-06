@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DosComponent } from './dos/dos.component';
 import { UnoComponent } from './uno/uno.component';
 import { DiaComponent } from './dia/dia.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DiaComponent } from './dia/dia.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
