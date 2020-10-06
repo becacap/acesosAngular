@@ -25,12 +25,33 @@
 </table>-->
 
 <!--<li class="calendarioMes" *ngFor="let diaSemana of diasSemana">{{diaSemana}}</li>-->
+
+<!-- CASI CASI
+<table class="table table-bordered">
+    <th *ngFor="let diaSemana of diasSemana">{{diaSemana}}</th>
+        <td *ngFor="let semana of todosDias">
+            <tr *ngFor="let diaSemana of semana">
+                <app-dia [dia]=diaSemana></app-dia>
+            </tr>
+        </td>
+
+</table>
+-->
+<!--
+<table mat-table class="table table-bordered">
+    <th *ngFor="let diaSemana of diasSemana">{{diaSemana}}</th>
+    
+</table>
+-->
+
 <table>
     <th *ngFor="let diaSemana of diasSemana">{{diaSemana}}</th>
-    <tr *ngFor="let semana of todosDias">
+    <tr *ngFor="let semana of matrizMes">
         <td *ngFor="let diaSemana of semana">
-            <app-dia [dia]=diaSemana></app-dia>
+            <div *ngIf="diaSemana.dia==0"></div>
+            <div *ngIf="diaSemana.dia!=0">
+                <app-dia [dia] = diaSemana></app-dia>
+            </div>
         </td>
     </tr>
-
 </table>
