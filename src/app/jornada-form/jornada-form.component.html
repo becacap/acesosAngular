@@ -1,0 +1,16 @@
+<div class="form-group">
+    <form action="" id="formulario">
+        <input id="idValue" type="hidden" value="{{hidden}}">
+        <input type="text" class="form-control" id="Lunes" placeholder="Lunes" required>
+        <input type="text" class="form-control" id="Martes" placeholder="Martes" required>
+        <input type="text" class="form-control" id="Miercoles" placeholder="Miercoles" required>
+        <input type="text" class="form-control" id="Jueves" placeholder="Jueves" required>
+        <input type="text" class="form-control" id="Viernes" placeholder="Viernes" required>
+        <input type="text" class="form-control" id="Descripcion" placeholder="Descripcion" required>
+        <p style="margin-top: 10px;">Especial</p>
+        <input type="checkbox" class="form-control" id="Especial" required>
+        
+    </form>
+    <button type="button" style="   margin: 0 auto; width: 100%;" class="btn btn-outline-success"
+        (click)=grabarJornada()>GRABAR</button>
+</div>
