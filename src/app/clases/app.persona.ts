@@ -134,3 +134,14 @@ export class Dia{
         this.estadoActual = estadoActual;
     }
 }
+
+export class Mes{
+    mes:number
+    nombreMes:string
+    datosDia:Array<Dia>
+    constructor(mes:number,nombreMes:string,datosDia:Array<Dia>){
+        this.mes = mes;
+        this.nombreMes = nombreMes;
+        this.datosDia = datosDia;
+    }
+}

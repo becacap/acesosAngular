@@ -8,6 +8,7 @@ import { UnoComponent } from './uno/uno.component';
 import { DiaComponent } from './dia/dia.component';
 import { FormsModule } from '@angular/forms';
 import { MesComponent } from './mes/mes.component';
+import { CalendarioComponent } from './calendario/calendario.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MesComponent } from './mes/mes.component';
     UnoComponent,
     DiaComponent,
     MesComponent,
+    CalendarioComponent,
     
   ],
   imports: [
