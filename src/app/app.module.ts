@@ -8,6 +8,7 @@ import { DosComponent } from './dos/dos.component';
 import { JornadaFormComponent } from './jornada-form/jornada-form.component';
 import { JornadaTableComponent } from './jornada-table/jornada-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { JornadasComponent } from './jornadas/jornadas.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     DosComponent,
     JornadaFormComponent,
-    JornadaTableComponent
+    JornadaTableComponent,
+    JornadasComponent
     
   ],
   imports: [
