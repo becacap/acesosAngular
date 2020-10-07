@@ -8,7 +8,16 @@
         </option>
     </select>
     </form>
-    <div *ngFor="let mesDeAnio of anio">
-        <app-mes [mes]=mesDeAnio></app-mes>
+
+    <div id="mi-spinner-container" style="display: none;">
+        <div class="spinner-border text-primary"></div>
+        <p id="mi-cargando-msg">Cargando el calendario...</p>
     </div>
+
+    <div id="mi-calendario-container">
+        <div *ngFor="let mesDeAnio of anio">
+            <app-mes [mes]=mesDeAnio></app-mes>
+        </div>
+    </div>
+
 </div>

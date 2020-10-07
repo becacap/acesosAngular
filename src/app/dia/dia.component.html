@@ -1,4 +1,4 @@
-<div class="mi-option">
+<div class="mi-dia-container" id={{dia.idCalendario}}>
     <h1>{{dia.dia}}</h1>
 
     <select name="estado" id="estado" [(ngModel)]="seleccion" (change)="cambiarOpcion($event.target.value)">

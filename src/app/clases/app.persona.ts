@@ -1,29 +1,28 @@
 import { StringMap } from '@angular/compiler/src/compiler_facade_interface'
 
 
-export class Persona{
-    nombre:string
-    edad:number
-    constructor(nombre:string,edad:number)
-    {
-        this.edad=edad
-        this.nombre=nombre
+export class Persona {
+    nombre: string
+    edad: number
+    constructor(nombre: string, edad: number) {
+        this.edad = edad
+        this.nombre = nombre
     }
 }
 export class Animal {
-    nombre:string
-    sonido:string
+    nombre: string
+    sonido: string
     constructor(nombre, sonido) {
         this.nombre = nombre;
         this.sonido = sonido;
     }
 
-    emitirSonido():void {
+    emitirSonido(): void {
         console.log("el " + this.nombre + " emite el sonido " + this.sonido);
     }
 }
 export class Perro extends Animal {
-    raza:string
+    raza: string
     constructor(nombre, sonido, raza) {
         super(nombre, sonido);
         this.raza = raza;
@@ -39,26 +38,28 @@ export class Perro extends Animal {
 }
 
 export class Estado {
-    id:number
-    descripcion:string
-    tipo:number
-    constructor(id, descripcion, tipo) {
+    id: number
+    descripcion: string
+    tipo: number
+    color: string
+    constructor(id, descripcion, tipo, color) {
         this.id = id;
         this.descripcion = descripcion;
         this.tipo = tipo;
+        this.color = color;
     }
 }
 
 
 export class Empleado {
-    id:number
-    nombre:string
-    apellidos:string
-    dni:string
-    identificador:string
-    jornada:Jornada
-    fecha_alta:Date
-    fecha_baja:Date
+    id: number
+    nombre: string
+    apellidos: string
+    dni: string
+    identificador: string
+    jornada: Jornada
+    fecha_alta: Date
+    fecha_baja: Date
     constructor(id, nombre, apellidos, dni, identificador, jornada, fecha_alta, fecha_baja) {
         this.id = id;
         this.nombre = nombre;
@@ -73,14 +74,14 @@ export class Empleado {
 }
 
 export class Jornada {
-    id:number
-    descripcion:string
-    especial:boolean
-    lunes:string
-    martes:string
-    miercoles:string
-    jueves:string
-    viernes:string
+    id: number
+    descripcion: string
+    especial: boolean
+    lunes: string
+    martes: string
+    miercoles: string
+    jueves: string
+    viernes: string
 
     constructor(id, descripcion, especial, lunes, martes, miercoles, jueves, viernes) {
         this.id = id;
@@ -97,9 +98,9 @@ export class Jornada {
 
 
 export class Calendario {
-    id:number
-    estado:Estado
-    fecha:Date
+    id: number
+    estado: Estado
+    fecha: Date
     constructor(id, estado, fecha,) {
         this.id = id;
         this.estado = estado;
@@ -108,11 +109,11 @@ export class Calendario {
 
 }
 export class UsuariosEstados {
-    id:number
-    empleado:Empleado
-    estado:Estado
-    jornada:Jornada
-    calendario:Calendario       
+    id: number
+    empleado: Empleado
+    estado: Estado
+    jornada: Jornada
+    calendario: Calendario
     constructor(id, empleado, estado, jornada, calendario) {
         this.id = id
         this.empleado = empleado
@@ -122,12 +123,14 @@ export class UsuariosEstados {
     }
 }
 
-export class Dia{
-    dia:number
-    diaSemana:number
-    semanaMes:number
-    estado:number
-    constructor(dia:number,diaSemana:number,semanaMes:number,estado:number){
+export class Dia {
+    dia: number
+    diaSemana: number
+    semanaMes: number
+    estado: number
+    idCalendario: number
+    constructor(idCalendario: number, dia: number, diaSemana: number, semanaMes: number, estado: number) {
+        this.idCalendario = idCalendario;
         this.dia = dia;
         this.diaSemana = diaSemana;
         this.semanaMes = semanaMes;
@@ -135,11 +138,11 @@ export class Dia{
     }
 }
 
-export class Mes{
-    mes:number
-    nombreMes:string
-    datosDias:Array<Dia>
-    constructor(mes:number,nombreMes:string,datosDia:Array<Dia>){
+export class Mes {
+    mes: number
+    nombreMes: string
+    datosDias: Array<Dia>
+    constructor(mes: number, nombreMes: string, datosDia: Array<Dia>) {
         this.mes = mes;
         this.nombreMes = nombreMes;
         this.datosDias = datosDia;
