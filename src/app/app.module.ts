@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DosComponent } from './dos/dos.component';
 import { UnoComponent } from './uno/uno.component';
+import { FichajesFiltrosComponent } from './fichajes/fichajes-filtros/fichajes-filtros.component';
+import { FichajesRegistrosComponent } from './fichajes/fichajes-registros/fichajes-registros.component';
+import { FichajesContainerComponent } from './fichajes/fichajes-container/fichajes-container.component';
 
 
 @NgModule({
@@ -12,6 +15,9 @@ import { UnoComponent } from './uno/uno.component';
     AppComponent,
     DosComponent,
     UnoComponent,
+    FichajesFiltrosComponent,
+    FichajesRegistrosComponent,
+    FichajesContainerComponent,
     
   ],
   imports: [

@@ -1,0 +1,20 @@
+<div>
+    
+    <select name="selectAnyo" id="selectAnyo" (change)="setSelectedYear(selectedYear.value)" #selectedYear>
+        <option value=-1> --- </option>
+        <option value={{i}} *ngFor="let year of this.years; let i=index">{{year}}</option>
+    </select>
+    
+    <select name="selectMes" id="selectMes" (change)="setSelectedMes(selectedMes.value)" #selectedMes>
+        <option value=-1> --- </option>
+        <option value={{i}} *ngFor="let mes of this.meses; let i=index">{{mes}}</option>
+    </select>
+
+    <select name="selectEmpleado" id="selectEmpleado" (change)="setSelectedEmpleado(selectedEmpleado.value)" #selectedEmpleado>
+        <option value=-1> --- </option>
+        <option value={{i}} *ngFor="let empl of service.empleados; let i=index">{{empl.nombre + " " + empl.apellidos}}</option>
+    </select>
+    
+    <button (click)="refreshData()"><i class="material-icons">refresh</i></button>
+
+</div>
