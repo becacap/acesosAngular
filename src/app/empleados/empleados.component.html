@@ -23,11 +23,8 @@
         <td>{{empleado.fecha_alta}}</td>
         <td>{{empleado.fecha_baja}}</td>
         <td>{{empleado.jornada.descripcion}}</td>
-        <td><button type="button" class="btn btn-primary">Modificar</button>
-            <br>
-            <br>
-            <button type="button" class="btn btn-danger">Borrar</button>
-                                                                        </td>
+        <td><button type="button" class="btn btn-primary" (click)="modificar(empleado)">Modificar</button>
+        </td>
     </tr>
 
 </table>

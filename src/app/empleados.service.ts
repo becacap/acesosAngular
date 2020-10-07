@@ -10,7 +10,7 @@ export class EmpleadoService {
   
   constructor() { }
 
-  obtenerEmpleados(url: string): Promise<string> {
+  obtenerDatos(url: string): Promise<string> {
 
     return new Promise(function (resolve, reject) {
       var headers = new Headers();
@@ -23,7 +23,7 @@ export class EmpleadoService {
   }
 
 
-/*
+
   grabarEmpleado(url: string, dato): Promise<string> {
 
     return new Promise(function (resolve, reject) {
@@ -36,6 +36,8 @@ export class EmpleadoService {
   }
   
 
+
+/*
   grabarJornada(url: string, dato): Promise<string> {
 
     return new Promise(function (resolve, reject) {
