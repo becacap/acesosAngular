@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FichajesService } from '../fichajes-service/fichajes.service';
+import { FichajesService } from '../../fichajes-service/fichajes.service';
 
 @Component({
   selector: 'app-fichajes-filtros',

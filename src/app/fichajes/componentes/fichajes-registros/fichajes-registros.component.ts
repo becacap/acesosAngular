@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FichajesService } from '../fichajes-service/fichajes.service';
-import { DataChangedListener } from '../other/dataChangedListener';
+import { FichajesService } from '../../fichajes-service/fichajes.service';
+import { DataChangedListener } from '../../other/dataChangedListener';
 
 @Component({
   selector: 'app-fichajes-registros',
