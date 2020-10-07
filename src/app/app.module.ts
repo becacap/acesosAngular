@@ -9,6 +9,7 @@ import { DiaComponent } from './dia/dia.component';
 import { FormsModule } from '@angular/forms';
 import { MesComponent } from './mes/mes.component';
 import { CalendarioComponent } from './calendario/calendario.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CalendarioComponent } from './calendario/calendario.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

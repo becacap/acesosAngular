@@ -1,11 +1,12 @@
-<!--<select name="anio" id="anio" [(ngModel)]="seleccion" (change)="elegirAnio($event.target.value)">
-    <option *ngFor="let estado of estadosPosibles" value={{estado.id}}>
-        {{estado.descripcion}}
-    </option>
-</select>-->
-
+<form action="" class="form-inline">
+    <label for="elegirAnio" class="mr-sm-3">Elige un año:</label>
+    <select class="form-control mb-2 mr-sm-3" name="anio" id="anio" (change)="elegirAnio($event.target.value)">
+        <option selected="true" disabled="disabled">Seleccione año:</option>
+        <option *ngFor="let anioPosible of aniosPosibles" value={{anioPosible}}>
+            {{anioPosible}}
+        </option>
+    </select>
+</form>
 <div *ngFor="let mesDeAnio of anio">
     <app-mes [mes]=mesDeAnio></app-mes>
 </div>
-
-

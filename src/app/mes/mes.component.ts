@@ -32,12 +32,12 @@ export class MesComponent implements OnInit {
     semana = new Array;
     let relleno = 0;
 
-    //Relleno antes del primer dia con dias = 0
-      //Determinamos los dias a rellenar
-    if(this.mes.datosDias[0].diaSemana==0){
+    //Relleno antes del primer dia con dias nulos
+      //Determinamos los dias a rellenar sabiendo a que dia de semana cae el primero de mes (Domingo=1,lunes=2...)
+    if(this.mes.datosDias[0].diaSemana==1){
       relleno = this.diasSemana.length -1;
-    }else if(this.mes.datosDias[0].diaSemana > 1){
-      relleno = this.mes.datosDias[0].diaSemana-1;
+    }else if(this.mes.datosDias[0].diaSemana > 2){
+      relleno = this.mes.datosDias[0].diaSemana-2;
     }
       //Rellenamos los dias vacios
     for(let i=0; i<relleno; i++){
