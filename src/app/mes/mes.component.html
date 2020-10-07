@@ -1,13 +1,17 @@
-<h1>{{mes.nombreMes}}</h1>
+<div id="mi-div">
+    <div id="mi-div-cabecera">
+        <span>{{mes.nombreMes}}</span>
+    </div>
 
-<table class="table table-bordered">
-    <th *ngFor="let diaSemana of diasSemana">{{diaSemana}}</th>
-    <tr *ngFor="let semana of matrizMes">
-        <td *ngFor="let diaSemana of semana">
-            <div *ngIf="diaSemana.dia==0"></div>
-            <div *ngIf="diaSemana.dia!=0">
-                <app-dia [dia] = diaSemana></app-dia>
-            </div>
-        </td>
-    </tr>
-</table>
+    <table class="table table-bordered">
+        <th *ngFor="let diaSemana of diasSemana">{{diaSemana}}</th>
+        <tr *ngFor="let semana of matrizMes">
+            <td *ngFor="let diaSemana of semana">
+                <div *ngIf="diaSemana.dia==0"></div>
+                <div *ngIf="diaSemana.dia!=0">
+                    <app-dia [dia]=diaSemana></app-dia>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

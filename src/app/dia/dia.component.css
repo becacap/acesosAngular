@@ -1,3 +1,13 @@
-.mi-option{
-    background-color: crimson;
+.mi-option {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    align-items: center;
+}
+
+.mi-option>select {
+    width: 100%;
+    padding: 4%;
+    border-radius: 12px;
 }
