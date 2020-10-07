@@ -22,13 +22,13 @@ export class MesComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    //console.log(this.mes)
     this.separarCalendarioDiasSemana()
   }
 
   separarCalendarioDiasSemana(){
     let semana:Array<Dia>
     let semanaMesRef:number = this.mes.datosDias[0].semanaMes;
-    console.log(semanaMesRef)
     semana = new Array;
     let relleno = 0;
 

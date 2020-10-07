@@ -126,8 +126,8 @@ export class Dia{
     dia:number
     diaSemana:number
     semanaMes:number
-    estado:Estado
-    constructor(dia:number,diaSemana:number,semanaMes:number,estado:Estado){
+    estado:number
+    constructor(dia:number,diaSemana:number,semanaMes:number,estado:number){
         this.dia = dia;
         this.diaSemana = diaSemana;
         this.semanaMes = semanaMes;
