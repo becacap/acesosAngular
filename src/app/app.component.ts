@@ -11,7 +11,30 @@ import { EmpleadoService } from './empleados.service';
 export class AppComponent {
 
 
+  constructor() {
+    
+  }
 
   
+
+  /*
+  anadirEmpleado() {
+
+    var sEmpleado = document.createElement("select");
+    sEmpleado.id = "sEmpleado"
+
+    if (document.querySelector("#sEmpleado") != null)
+      document.querySelector("#sEmpleado").remove
+
+
+    document.querySelector("#capaSelect").appendChild(sEmpleado)
+
+
+    this.servicio.grabarEmpleado(this.urlEmpleadoAnadir, this.empleado).then((jornada: string) => {
+      console.log(this.empleado);
+    })
+  }
+
+*/
 }
 

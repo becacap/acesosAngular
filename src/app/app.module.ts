@@ -18,7 +18,7 @@ import { EmpleadoFormularioComponent } from './empleado-formulario/empleado-form
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

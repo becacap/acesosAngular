@@ -1,25 +1,40 @@
 <h1>EMPLEADOS</h1>
 
 <div class="form-group" id="mi-div">
+    <input type="hidden" value="{{id}}">
     <div class="mi-div-interno">
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" #nombre>
     </div>
     <div class="mi-div-interno">
-        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" #apellidos>
     </div>
     <div class="mi-div-interno">
-        <input type="text" id="dni" name="dni" placeholder="DNI">
+        <input type="text" id="dni" name="dni" placeholder="DNI" #dni>
     </div>
     <div class="mi-div-interno">
-        <input type="text" id="identificador" name="identificador" placeholder="Identificador">
+        <input type="text" id="identificador" name="identificador" placeholder="Identificador" #identificador>
     </div>
     <div class="mi-div-interno">
-        <input type="text" id="fecha_alta" name="fecha_alta" placeholder="Fecha alta">
+        <input type="date" id="fecha_alta" name="fecha_alta" placeholder="Fecha alta" #fecha_alta>
     </div>
     <div class="mi-div-interno">
-        <input type="text" id="fecha_baja" name="fecha_baja" placeholder="Fecha baja">
+        <input type="date" id="fecha_baja" name="fecha_baja" placeholder="Fecha baja" #fecha_baja>
     </div>
     <div class="mi-div-interno">
-        <input type="text" id="jornada" name="jornada" placeholder="Jornada">
+        
+        <select ng-model="#jornada" #jornada>
+            <div *ngIf="flag; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>
+                <option disabled selected>{{jornada_actual}}</option>
+            </ng-template>
+            <ng-template #elseBlock>
+                    <option disabled selected>Selecciona Jornada</option>
+            </ng-template>
+            <option [value] = "jornada.id" *ngFor="let jornada of jornadas">{{jornada.descripcion}}</option>
+        </select>
     </div>
+
+
+    <button class="btn btn-primary col-md-2"
+        (click)="grabar(id, nombre.value, apellidos.value, dni.value, identificador.value, fecha_alta.value, fecha_baja.value, jornada.value)">Grabar</button>
 </div>
