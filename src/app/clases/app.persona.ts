@@ -126,22 +126,22 @@ export class Dia{
     dia:number
     diaSemana:number
     semanaMes:number
-    estadoActual:Estado
-    constructor(dia:number,diaSemana:number,semanaMes:number,estadoActual:Estado){
+    estado:Estado
+    constructor(dia:number,diaSemana:number,semanaMes:number,estado:Estado){
         this.dia = dia;
         this.diaSemana = diaSemana;
         this.semanaMes = semanaMes;
-        this.estadoActual = estadoActual;
+        this.estado = estado;
     }
 }
 
 export class Mes{
     mes:number
     nombreMes:string
-    datosDia:Array<Dia>
+    datosDias:Array<Dia>
     constructor(mes:number,nombreMes:string,datosDia:Array<Dia>){
         this.mes = mes;
         this.nombreMes = nombreMes;
-        this.datosDia = datosDia;
+        this.datosDias = datosDia;
     }
 }

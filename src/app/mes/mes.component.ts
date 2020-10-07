@@ -9,7 +9,6 @@ import { Dia, Estado, Mes } from '../clases/app.persona';
 })
 export class MesComponent implements OnInit {
 
-  semanasMes:number
   diasSemana:Array<string>
 
   @Input("mes") mes:Mes
@@ -18,8 +17,7 @@ export class MesComponent implements OnInit {
   //dia:Dia
 
   constructor() {
-    this.semanasMes = 5;
-    this.diasSemana = ['Lunes', 'Martes','Miercoles']
+    this.diasSemana = ['Lunes', 'Martes','Miercoles','Jueves','Viernes','Sabado','Domingo']
     this.matrizMes = new Array;
    }
 
@@ -29,16 +27,17 @@ export class MesComponent implements OnInit {
 
   separarCalendarioDiasSemana(){
     let semana:Array<Dia>
-    let semanaMesRef = this.mes.datosDia[0].semanaMes;
+    let semanaMesRef:number = this.mes.datosDias[0].semanaMes;
+    console.log(semanaMesRef)
     semana = new Array;
     let relleno = 0;
 
     //Relleno antes del primer dia con dias = 0
       //Determinamos los dias a rellenar
-    if(this.mes.datosDia[0].diaSemana==0){
+    if(this.mes.datosDias[0].diaSemana==0){
       relleno = this.diasSemana.length -1;
-    }else if(this.mes.datosDia[0].diaSemana > 1){
-      relleno = this.mes.datosDia[0].diaSemana-1;
+    }else if(this.mes.datosDias[0].diaSemana > 1){
+      relleno = this.mes.datosDias[0].diaSemana-1;
     }
       //Rellenamos los dias vacios
     for(let i=0; i<relleno; i++){
@@ -46,7 +45,7 @@ export class MesComponent implements OnInit {
     }
 
     //Relleno con el resto con los datos
-    this.mes.datosDia.forEach(dia=>{
+    this.mes.datosDias.forEach(dia=>{
       if(dia.semanaMes == semanaMesRef){
         semana.push(dia);
       }else{
@@ -57,6 +56,5 @@ export class MesComponent implements OnInit {
       }
     })
     this.matrizMes.push(semana);
-    console.log(this.matrizMes)
   }
 }

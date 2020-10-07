@@ -1,1 +1,11 @@
-<app-mes [mes]="mes"></app-mes>
+<!--<select name="anio" id="anio" [(ngModel)]="seleccion" (change)="elegirAnio($event.target.value)">
+    <option *ngFor="let estado of estadosPosibles" value={{estado.id}}>
+        {{estado.descripcion}}
+    </option>
+</select>-->
+
+<div *ngFor="let mesDeAnio of anio">
+    <app-mes [mes]=mesDeAnio></app-mes>
+</div>
+
+

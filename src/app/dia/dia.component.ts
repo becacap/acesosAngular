@@ -21,7 +21,7 @@ export class DiaComponent implements OnInit {
     this.servicio.obtenerDatos(this.urlEstados).then((datos: string) => {
       //console.log(datos)
       this.estadosPosibles = JSON.parse(JSON.stringify(datos))
-      this.seleccion = this.dia.estadoActual.id;
+      this.seleccion = this.dia.estado.id;
       //console.log(this.seleccion)
 
     })
