@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { MesComponent } from './mes/mes.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarioEmpleadoComponent } from './calendario-empleado/calendario-empleado.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DiaComponent,
     MesComponent,
     CalendarioComponent,
+    CalendarioEmpleadoComponent,
     
   ],
   imports: [
