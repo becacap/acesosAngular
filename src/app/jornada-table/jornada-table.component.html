@@ -1,4 +1,6 @@
+<mat-card style="margin-bottom: 20px; background-color: #fffcf2;">
 <table class="table">
+    
     <tr id="cabecera">
         <td>LUNES</td>
         <td>MARTES</td>
@@ -8,6 +10,7 @@
         <td>DESCRIPCION</td>
         <td>ESPECIAL</td>
         <td>ACCION</td>
+    
     </tr>
 
     <tr *ngFor="let jornada of jornadas">
@@ -21,4 +24,7 @@
         <button type="button" class="btn btn-outline-warning" (click)=modificarJornada(jornada)>MODIFICAR</button>
 
     </tr>
+    
+
 </table>
+</mat-card>
