@@ -20,7 +20,7 @@ export class FichajesRegistrosComponent implements OnInit, DataChangedListener {
     
   }
 
-  onFilterRefreshParameters (year:number, mes:string, empleado:string) : void {
+  onFilterRefreshParameters (year:number, mes:number, empleado:string) : void {
     this.service.loadAccesos (year, mes, empleado);
   }
 }

@@ -1,3 +1,3 @@
 export interface DataChangedListener {
-    onFilterRefreshParameters (year:number, mes:string, empleado:string) : void;
+    onFilterRefreshParameters (year:number, mes:number, empleado:string) : void;
 }

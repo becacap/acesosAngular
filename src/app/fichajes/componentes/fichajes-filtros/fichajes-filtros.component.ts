@@ -28,14 +28,14 @@ export class FichajesFiltrosComponent implements OnInit {
     
   }
 
-  setSelectedYear     (selectedIndex: number) { this.selectedIndexYear     = selectedIndex; }
-  setSelectedMes      (selectedIndex: number) { this.selectedIndexMes      = selectedIndex; }
-  setSelectedEmpleado (selectedIndex: number) { this.selectedIndexEmpleado = selectedIndex; }
+  setSelectedYear     (value: string) { this.selectedIndexYear     = parseInt (value); }
+  setSelectedMes      (value: string) { this.selectedIndexMes      = parseInt (value); }
+  setSelectedEmpleado (value: string) { this.selectedIndexEmpleado = parseInt (value); }
 
   refreshData () { 
     this.service.notifyParamsChanged (
       this.years[this.selectedIndexYear],
-      this.meses[this.selectedIndexMes],
+      this.selectedIndexMes + 1,
       this.service.empleados[this.selectedIndexEmpleado]
     ); 
   }

@@ -7,15 +7,10 @@
     </tr>
     <tr *ngFor="let acceso of service.accesos">
         <td>{{acceso.fecha}}</td>
-        <td>{{acceso.empleado.fullname}}</td>
-        <td>{{acceso.entrada}}</td>
-        <td>{{acceso.salida}}</td>
+        <td>{{acceso.nombre}}</td>
+        <td>{{acceso.horaEntrada}}</td>
+        <td>{{acceso.horaSalida}}</td>
     </tr>
 </table>
-<!-- <div *ngIf="service.empleados"> -->
-<div *ngIf="service.accesos">
-    <!-- <h3 *ngFor="let empl of service.empleados">Data: {{empl.nombre + " " + empl.apellidos}}</h3> -->
-    <!-- <h3 *ngFor="let acceso of service.accesos">Data: {{acceso.nombre + " " + acceso.apellidos}}</h3> -->
-    <h3 *ngFor="let acceso of service.accesos">Data: {{acceso}}</h3>
-</div>
+
 
