@@ -12,3 +12,11 @@
     padding: 4%;
     border-radius: 8px;
 }
+
+.rojo{
+    background-color: #ff0000;
+}
+
+.blanco{
+    background-color: #ffffff;
+}

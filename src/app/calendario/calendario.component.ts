@@ -39,6 +39,7 @@ export class CalendarioComponent implements OnInit {
     let urlObtenerDatosCalendario: string = "http://localhost:8080/api/calendario/" + anioElegido + "/datos";
     this.servicio.obtenerDatos(urlObtenerDatosCalendario).then((datos: string) => {
       this.anio = JSON.parse(JSON.stringify(datos));
+      console.log(this.anio)
     }).then(function () {
       document.getElementById("mi-spinner-container").style.display = "none";
       document.getElementById("mi-calendario-container").style.display = "flex";

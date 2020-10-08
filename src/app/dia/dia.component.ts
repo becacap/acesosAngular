@@ -25,8 +25,8 @@ export class DiaComponent implements OnInit {
   ngOnInit(): void {
     this.servicio.obtenerDatos(`${this.urlBaseEstados}/estados-calendario`).then((datos: string) => {
       this.estadosPosibles = JSON.parse(JSON.stringify(datos))
-      this.pintaDia(this.dia.estado);
-      this.seleccion = this.dia.estado;
+      //this.pintaDia(this.dia.estado);
+      this.seleccion = this.dia.estado.id;
     })
   }
 
