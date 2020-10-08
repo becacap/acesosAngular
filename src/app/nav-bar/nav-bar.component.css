@@ -1,0 +1,9 @@
+ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+.miclase{
+    width: 100%;
+    background-color: aquamarine;
+}
