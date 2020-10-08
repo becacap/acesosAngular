@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Empleado } from './clases/app.persona';
+import { EmpleadoFormularioComponent } from './empleado-formulario/empleado-formulario.component';
+import { EmpleadosComponent } from './empleados/empleados.component';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +9,9 @@ import { Empleado } from './clases/app.persona';
 export class EmpleadoService {
 
   texto: string; 
-  
+  empleados: EmpleadosComponent;
+  empleados_formulario: EmpleadoFormularioComponent;
+
   constructor() { }
 
   obtenerDatos(url: string): Promise<string> {
@@ -35,8 +39,21 @@ export class EmpleadoService {
     })
   }
   
+getEmpleados(){
+  return this.empleados;
+}
 
+setEmpleados(empleados:EmpleadosComponent){
+  this.empleados= empleados;
+}
 
+getEmpleadosFormulario(){
+  return this.empleados_formulario;
+}
+
+setEmpleadosFormulario(empleados_formulario:EmpleadoFormularioComponent){
+  this.empleados_formulario= empleados_formulario;
+}
 /*
   grabarJornada(url: string, dato): Promise<string> {
 

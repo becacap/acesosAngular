@@ -7,24 +7,26 @@ import { EmpleadosComponent } from './empleados/empleados.component';
 })
 export class ComunicarEmpleadosService {
 
-  empleado: EmpleadosComponent
-  empleado_formulario: EmpleadoFormularioComponent
+  empleado:EmpleadosComponent;
+  empleado_formulario:EmpleadoFormularioComponent;
 
   constructor() { }
+
+  setEmpleado(empleado:EmpleadosComponent){
+    this.empleado=empleado;
+  }
 
   getEmpleado(){
     return this.empleado;
   }
 
-  setEmpleado(empleado: EmpleadosComponent){
-    this.empleado = empleado
+  setEmpleadoFormulario( empleado_formulario:EmpleadoFormularioComponent){
+    this.empleado_formulario=empleado_formulario;
   }
 
   getEmpleadoFormulario(){
-    return this.empleado_formulario
+    return this.empleado_formulario;
   }
 
-  setEmpleadoFormulario(empleado_formulario: EmpleadoFormularioComponent){
-    this.empleado_formulario = empleado_formulario
-  }
+
 }

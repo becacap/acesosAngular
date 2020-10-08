@@ -11,10 +11,7 @@ import { EmpleadoService } from './empleados.service';
 export class AppComponent {
 
 
-  constructor() {
-    
-  }
-
+  constructor(){}
   
 
   /*

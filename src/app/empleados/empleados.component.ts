@@ -1,7 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Empleado } from '../clases/app.persona';
+import { Component, OnInit } from '@angular/core';
+import { Persona, Estado, Jornada, UsuariosEstados, Empleado } from '../clases/app.persona'
 import { ComunicarEmpleadosService } from '../comunicar-empleados.service';
-import { EmpleadoFormularioComponent } from '../empleado-formulario/empleado-formulario.component';
 import { EmpleadoService } from '../empleados.service';
 
 
@@ -13,34 +12,54 @@ import { EmpleadoService } from '../empleados.service';
 export class EmpleadosComponent implements OnInit {
   
   saludo: string;
-  servicio: EmpleadoService;
   urlEmpleado: string = "http://localhost:8080/api/empleados"
-  urlEmpleadoAnadir: string = "http://localhost:8080/api/add-jornada" //No es esta URL revisar
-  empleado: string;
-  comunicar_empleados_servicio: ComunicarEmpleadosService
-  empleadoService:EmpleadoService
+ 
+  empleados: string;
+  servicio_Comunicacion:ComunicarEmpleadosService;
+  servicio_Empleado:EmpleadoService;
 
-
-  constructor(empleadoService: EmpleadoService, comunicar_empleados_servicio: ComunicarEmpleadosService) { 
-    this.saludo = empleadoService.texto;
-    this.servicio = empleadoService;
-    this.comunicar_empleados_servicio = comunicar_empleados_servicio
-    this.empleadoService = empleadoService
+  constructor(servicio_Comunicacion:ComunicarEmpleadosService, servicio2:EmpleadoService) {
+    this.servicio_Comunicacion=servicio_Comunicacion;
+    this.servicio_Empleado=servicio2;
   }
 
-  ngOnInit(): void {
-    this.comunicar_empleados_servicio.setEmpleado(this)
+  ngOnInit(): void{
+    this.servicio_Comunicacion.setEmpleado(this);
+    this.servicio_Empleado.setEmpleados(this);
     this.cargarEmpleado()
   }
 
   cargarEmpleado() {
-    this.servicio.obtenerDatos(this.urlEmpleado).then((datos: string) => {
+    this.servicio_Empleado.obtenerDatos(this.urlEmpleado).then((datos: string) => {
       console.log(datos)
-      this.empleado = datos;
+      this.empleados = datos;
     })
   }
 
-  modificar(empleado){
-    this.comunicar_empleados_servicio.getEmpleadoFormulario().rellenarTabla(empleado)
+  modificar(empleado:Empleado){
+       //this.servicio.getEmpleadoFormulario().rellenarTabla(empleado)
+       this.servicio_Empleado.getEmpleadosFormulario().rellenarTabla(empleado)
+       
   }
+
+  /*
+  anadirEmpleado() {
+
+    var sEmpleado = document.createElement("select");
+    sEmpleado.id = "sEmpleado"
+
+    if (document.querySelector("#sEmpleado") != null)
+      document.querySelector("#sEmpleado").remove
+
+
+    document.querySelector("#capaSelect").appendChild(sEmpleado)
+
+
+    this.servicio.grabarEmpleado(this.urlEmpleadoAnadir, this.empleado).then((jornada: string) => {
+      console.log(this.empleado);
+    })
+  }
+
+*/
+
 }
