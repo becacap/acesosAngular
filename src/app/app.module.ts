@@ -3,20 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DosComponent } from './dos/dos.component';
-import { UnoComponent } from './uno/uno.component';
+import { JornadasComponent } from './jornadas/jornadas.component';
+import { EmpleadosComponent } from './empleados/empleados.component';
+import { EmpleadoFormularioComponent } from './empleado-formulario/empleado-formulario.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DosComponent,
-    UnoComponent,
+    JornadasComponent,
+    EmpleadosComponent,
+    EmpleadoFormularioComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
