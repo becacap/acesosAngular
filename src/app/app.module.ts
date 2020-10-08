@@ -11,6 +11,13 @@ import { JornadaTableComponent } from './jornada-table/jornada-table.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DosComponent } from './dos/dos.component';
+import { UnoComponent } from './uno/uno.component';
+import { DiaComponent } from './dia/dia.component';
+import { FormsModule } from '@angular/forms';
+import { MesComponent } from './mes/mes.component';
+import { CalendarioComponent } from './calendario/calendario.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -23,6 +30,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     JornadaTableComponent,
     JornadasComponent,
     NavBarComponent
+    DosComponent,
+    UnoComponent,
+    DiaComponent,
+    MesComponent,
+    CalendarioComponent,
     
   ],
   imports: [
@@ -30,6 +42,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     CommonModule,
     MatCardModule,
+    BrowserAnimationsModule
+    AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule
   ],
   providers: [],
