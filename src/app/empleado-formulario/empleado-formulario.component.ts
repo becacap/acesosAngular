@@ -17,16 +17,7 @@ import { EmpleadoService } from '../empleados.service';
 })
 
 export class EmpleadoFormularioComponent implements OnInit {
-  id:number
-  urlModificar:string = "http://localhost:8080/api/modificarEmpleados"
-  urlJornadas: string =  "http://localhost:8080/api/jornadas"
-  urlJornada: string = "http://localhost:8080/api/jornada/"
-  empleado_service: EmpleadoService
-  comunicar_empleados_servicio: ComunicarEmpleadosService
-  jornadas: string
-  jornada_nueva: string
-  jornada_actual: string
-  flag:boolean = false;
+
 
   servicio_Comunicacion:ComunicarEmpleadosService;
   servicio_Empleado: EmpleadoService;
@@ -69,6 +60,7 @@ export class EmpleadoFormularioComponent implements OnInit {
       (<HTMLInputElement> document.getElementById("fecha_baja")).value=empleado.fecha_baja.toString();
     }
     this.jornada_seleccionada = empleado.jornada.descripcion;
+    console.log(this.jornada_seleccionada)
   }
 
   obtenerValores(idEmpleado,nombre,apellidos,dni,identificador,jornadaId,fecha_alta,fecha_baja){

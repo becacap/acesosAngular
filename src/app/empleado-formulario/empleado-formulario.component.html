@@ -21,14 +21,11 @@
     </div>
     <div class="mi-div-interno">
         <select name="jornadasSelect" #jornada>
-            <div *ngIf="flagModificar === 1; else elseBlock"><option selected>{{jornada_seleccionada}}</option></div>
+            <div *ngIf="flagModificar === 1;then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock><option selected>{{jornada_seleccionada}}</option></ng-template>
             <ng-template #elseBlock><option selected>Jornada</option></ng-template>
             <option [value]="jornada.id"  *ngFor="let jornada of jornadas">{{jornada.descripcion}}</option>
         </select>
     </div>
-
-
-    <button class="btn btn-primary col-md-2"
-        (click)="grabar(id, nombre.value, apellidos.value, dni.value, identificador.value, fecha_alta.value, fecha_baja.value, jornada.value)">Grabar</button>
 </div>
 <button (click)="obtenerValores(id,nombre.value,apellidos.value,dni.value,identificador.value,jornada.value,fecha_alta.value,fecha_baja.value)">Grabar</button>
