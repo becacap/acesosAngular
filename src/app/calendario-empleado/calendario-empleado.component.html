@@ -1,9 +1,0 @@
-<select [(ngModel)]="empleadoSeleccionado">
-    <option *ngFor="let empleado of empleados" value="{{empleado.id}}">{{empleado.nombre}} {{empleado.apellidos}}</option> 
-</select>
-
-<select [(ngModel)]="anyoSeleccionado">
-    <option *ngFor="let anyo of anyos" value="{{anyo}}">{{anyo}}</option> 
-</select>
-<button routerLink='calendarioempleado' (click)="cargarCalendarioEmpleado()">Calendario Empleado</button>
-<br>

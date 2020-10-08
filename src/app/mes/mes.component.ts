@@ -1,6 +1,6 @@
 import { newArray } from '@angular/compiler/src/util';
 import { Component, Input, OnInit } from '@angular/core';
-import { Dia, Estado, Mes } from '../clases/app.persona';
+import { Dia, Estado, Jornada, Mes, UsuariosEstados } from '../clases/app.persona';
 
 @Component({
   selector: 'app-mes',
@@ -12,6 +12,10 @@ export class MesComponent implements OnInit {
   diasSemana:Array<string>
 
   @Input("mes") mes:Mes
+  @Input("estados") estadosPosibles:Array<Estado>
+  @Input("jornadas") jornadasPosibles:Array<Jornada>
+  @Input("usuarioEstado") usuarioEstado:Array<UsuariosEstados>
+
   matrizMes:Array<Array<Dia>>
 
   //dia:Dia
@@ -19,7 +23,7 @@ export class MesComponent implements OnInit {
   constructor() {
     this.diasSemana = ['Lunes', 'Martes','Miercoles','Jueves','Viernes','Sabado','Domingo']
     this.matrizMes = new Array;
-   }
+  }
 
   ngOnInit(): void {
     //console.log(this.mes)
@@ -33,13 +37,14 @@ export class MesComponent implements OnInit {
     let relleno = 0;
 
     //Relleno antes del primer dia con dias nulos
-      //Determinamos los dias a rellenar sabiendo a que dia de semana cae el primero de mes (Domingo=1,lunes=2...)
+    //Determinamos los dias a rellenar sabiendo a que dia de semana cae el primero de mes (Domingo=1,lunes=2...)
     if(this.mes.datosDias[0].diaSemana==1){
       relleno = this.diasSemana.length -1;
     }else if(this.mes.datosDias[0].diaSemana > 2){
       relleno = this.mes.datosDias[0].diaSemana-2;
     }
-      //Rellenamos los dias vacios
+    
+    //Rellenamos los dias vacios
     for(let i=0; i<relleno; i++){
       semana.push(new Dia(0,null,null,null));
     }
@@ -47,6 +52,7 @@ export class MesComponent implements OnInit {
     //Relleno con el resto con los datos
     this.mes.datosDias.forEach(dia=>{
       if(dia.semanaMes == semanaMesRef){
+        dia.usuarioEstado = this.usuarioEstado.pop()
         semana.push(dia);
       }else{
         this.matrizMes.push(semana);

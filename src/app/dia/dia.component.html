@@ -1,9 +1,16 @@
 <div class="mi-option">
     <h1>{{dia.dia}}</h1>
 
-    <select name="estado" id="estado" [(ngModel)]="seleccion" (change)="cambiarOpcion($event.target.value)">
-        <option *ngFor="let estado of estadosPosibles" value={{estado.id}}>
+    <select name="estado" id="estado" [(ngModel)]="seleccionEstado" (change)="cambiarOpcion($event.target.value)">
+        <option *ngFor="let estado of estados" value={{estado.id}}>
             {{estado.descripcion}}
         </option>
     </select>
+
+    <select name="jornada" id="jornada" [(ngModel)]="seleccionJornada" (change)="cambiarOpcion($event.target.value)">
+        <option *ngFor="let jornada of jornadas" value={{jornada.id}}>
+            {{jornada.descripcion}}
+        </option>
+    </select>
+
 </div>

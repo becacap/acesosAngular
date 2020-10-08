@@ -9,7 +9,7 @@
             <td *ngFor="let diaSemana of semana">
                 <div *ngIf="diaSemana.dia==0"></div>
                 <div *ngIf="diaSemana.dia!=0">
-                    <app-dia [dia]=diaSemana></app-dia>
+                    <app-dia [mes]=mes.mes [dia]=diaSemana [estados]=estadosPosibles [jornadas]=jornadasPosibles [usuarioEstado]=usuarioEstado></app-dia>
                 </div>
             </td>
         </tr>

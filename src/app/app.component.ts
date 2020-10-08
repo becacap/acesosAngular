@@ -12,6 +12,8 @@ export class AppComponent {
     servicio:AccesosServiceService;
     urlEstados:string="http://localhost:8080/verEstados"
     estados:string
+  
+    title: string;
 
   constructor(accesosService:AccesosServiceService){
     this.saludo=accesosService.texto;
