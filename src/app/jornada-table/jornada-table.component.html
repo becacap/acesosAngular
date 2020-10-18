@@ -1,0 +1,30 @@
+<mat-card style="margin-bottom: 20px; background-color: #fffcf2;">
+<table class="table">
+    
+    <tr id="cabecera">
+        <td>LUNES</td>
+        <td>MARTES</td>
+        <td>MIERCOLES</td>
+        <td>JUEVES</td>
+        <td>VIERNES</td>
+        <td>DESCRIPCION</td>
+        <td>ESPECIAL</td>
+        <td>ACCION</td>
+    
+    </tr>
+
+    <tr *ngFor="let jornada of jornadas">
+        <td>{{jornada.lunes}}</td>
+        <td>{{jornada.martes}}</td>
+        <td>{{jornada.miercoles}}</td>
+        <td>{{jornada.jueves}}</td>
+        <td>{{jornada.viernes}}</td>
+        <td>{{jornada.descripcion}}</td>
+        <td>{{jornada.especial}}</td>
+        <button type="button" class="btn btn-outline-warning" (click)=modificarJornada(jornada)>MODIFICAR</button>
+
+    </tr>
+    
+
+</table>
+</mat-card>

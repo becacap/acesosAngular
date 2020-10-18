@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UnoComponent } from './uno.component';
+import { MesComponent } from './mes.component';
 
-describe('UnoComponent', () => {
-  let component: UnoComponent;
-  let fixture: ComponentFixture<UnoComponent>;
+describe('MesComponent', () => {
+  let component: MesComponent;
+  let fixture: ComponentFixture<MesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UnoComponent ]
+      declarations: [ MesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UnoComponent);
+    fixture = TestBed.createComponent(MesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

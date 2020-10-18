@@ -1,0 +1,31 @@
+<h1>EMPLEADOS</h1>
+<div class="form-group" id="mi-div">
+    <input type="hidden" value="{{id}}">
+    <div class="mi-div-interno">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" #nombre>
+    </div>
+    <div class="mi-div-interno">
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" #apellidos>
+    </div>
+    <div class="mi-div-interno">
+        <input type="text" id="dni" name="dni" placeholder="DNI" #dni>
+    </div>
+    <div class="mi-div-interno">
+        <input type="text" id="identificador" name="identificador" placeholder="Identificador" #identificador>
+    </div>
+    <div class="mi-div-interno">
+        <input type="date" id="fecha_alta" name="fecha_alta" placeholder="Fecha alta" #fecha_alta>
+    </div>
+    <div class="mi-div-interno">
+        <input type="date" id="fecha_baja" name="fecha_baja" placeholder="Fecha baja" #fecha_baja>
+    </div>
+    <div class="mi-div-interno">
+        <select name="jornadasSelect" #jornada>
+            <div *ngIf="flagModificar === 1;then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock><option selected>{{jornada_seleccionada}}</option></ng-template>
+            <ng-template #elseBlock><option selected>Jornada</option></ng-template>
+            <option [value]="jornada.id"  *ngFor="let jornada of jornadas">{{jornada.descripcion}}</option>
+        </select>
+    </div>
+</div>
+<button (click)="obtenerValores(id,nombre.value,apellidos.value,dni.value,identificador.value,jornada.value,fecha_alta.value,fecha_baja.value)">Grabar</button>

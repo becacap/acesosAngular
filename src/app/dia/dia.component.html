@@ -1,0 +1,9 @@
+<div class="mi-dia-container" id={{dia.idCalendario}} class="{{dia.estado.color}}">
+    <h1>{{dia.dia}}</h1>
+
+    <select name="estado" id="estado" [(ngModel)]="seleccion" (change)="cambiarOpcion($event.target.value)">
+        <option *ngFor="let estado of estadosPosibles" value={{estado.id}}>
+            {{estado.descripcion}}
+        </option>
+    </select>
+</div>
